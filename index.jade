@@ -3,6 +3,8 @@ meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no
 meta(charset="utf-8")
 link(rel="stylesheet" href="index.css")
 link(rel="shortcut icon" href="images/favicon.png")
+meta(name="google-site-verification" content="XH-V9lvvJB_yd13v8bX2Mz1NVZbTWZ72jA9_w02jbzc")
+link(rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj")
 
 #fb-root
 script.
@@ -20,7 +22,12 @@ script.
 .hero
   h1 Pause Netflix for as long as you want.
   p
-    button Install Chrome Extension
+    button#install-button(onclick="chrome.webstore.install()") Install Chrome Extension
+    script.
+      if (chrome.app.isInstalled) {
+        document.getElementById('install-button').style.display = 'none';
+      }
+
   p.social
     span.twitter
       a(href="http://twitter.com/share" class="twitter-share-button" data-url="http://pauseindefinitely.com" data-text="Pause Netflix indefinitely without getting Playback Timeout errors." data-count="horizontal" data-via="adamfschwartz")
