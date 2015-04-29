@@ -26,11 +26,7 @@ html
     .hero
       h1 Pause Netflix for as long as you want.
       p
-        button#install-button(onclick="chrome.webstore.install()") Install Chrome Extension
-        script.
-          if (chrome.app.isInstalled) {
-            document.getElementById('install-button').style.display = 'none';
-          }
+        button(onclick="chrome.webstore.install()") Install Chrome Extension
 
       p.social
         span.twitter
