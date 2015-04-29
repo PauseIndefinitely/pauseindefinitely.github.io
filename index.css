@@ -182,6 +182,13 @@ button:focus:active:after {
   -webkit-filter: hue-rotate(126deg) saturate(2.5);
   opacity: 0.8;
 }
+.hero .twitter,
+.hero .facebook {
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  overflow: hidden;
+}
 .hero .social iframe {
   opacity: 0;
   transition: opacity 1s 1s ease-in-out;
