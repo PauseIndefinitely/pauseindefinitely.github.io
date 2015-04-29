@@ -5,7 +5,7 @@ js = d.createElement(s); js.id = id;
 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-</script><div class="logo"><h1>Pause Indefinitely for Netflix</h1></div><div class="hero"><h1>Pause Netflix for as long as you want.</h1><p><button id="install-button" onclick="chrome.webstore.install()">Install Chrome Extension</button><script>if (chrome.app.isInstalled) {
+</script><div class="logo"><h1>Pause Indefinitely for Netflix</h1></div><div class="hero"><h1>Pause Netflix for as long as you want.</h1><p><button id="install-button" onclick="try{chrome.webstore.install()}catch(e){location.href='https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj'}">Install Chrome Extension</button><script>if (chrome.app.isInstalled) {
   document.getElementById('install-button').style.display = 'none';
 }
 </script></p><p class="social"><span class="twitter"><a href="http://twitter.com/share" data-url="http://pauseindefinitely.com" data-text="Pause Netflix indefinitely without getting Playback Timed Out errors." data-count="horizontal" data-via="adamfschwartz" class="twitter-share-button"></a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span><span class="facebook"><span data-href="http://pauseindefinitely.com" data-layout="button_count" class="fb-share-button"></span></span><script>(function(){
@@ -16,4 +16,4 @@ fjs.parentNode.insertBefore(js, fjs);
     }
   }, 250);
 })();
-</script></p></div><div class="graphic"><div class="chrome"><div class="chrome-top"></div><div class="chrome-top-left"></div><div class="chrome-top-right"></div><div class="chrome-body"><div class="whoops"></div></div></div></div><div class="footer"><a href="http://twitter.com/adamfschwartz">Follow&nbsp;@adamfschwartz</a><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><a href="https://github.com/adamschwartz/netflix-pause-indefinitely">★&nbsp;on&nbsp;GitHub</a><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><a href="https://github.com/adamschwartz/netflix-pause-indefinitely">View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store</a></div></body>
+</script></p></div><div class="graphic"><div class="chrome"><div class="chrome-top"></div><div class="chrome-top-left"></div><div class="chrome-top-right"></div><div class="chrome-body"><div class="whoops"></div></div></div></div><div class="footer"><a href="http://twitter.com/adamfschwartz">Follow&nbsp;@adamfschwartz</a><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><a href="https://github.com/adamschwartz/netflix-pause-indefinitely">★&nbsp;on&nbsp;GitHub</a><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><a href="https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj">View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store</a></div></body>

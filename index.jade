@@ -26,7 +26,7 @@ body
   .hero
     h1 Pause Netflix for as long as you want.
     p
-      button#install-button(onclick="chrome.webstore.install()") Install Chrome Extension
+      button#install-button(onclick="try{chrome.webstore.install()}catch(e){location.href='https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj'}") Install Chrome Extension
       script.
         if (chrome.app.isInstalled) {
           document.getElementById('install-button').style.display = 'none';
@@ -62,4 +62,4 @@ body
     span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
     a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") ★&nbsp;on&nbsp;GitHub
     span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store
+    a(href="https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj") View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store
