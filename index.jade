@@ -1,61 +1,65 @@
-title Pause Indefinitely for Netflix - Never see Netflix timeout errors again
-meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui")
-meta(charset="utf-8")
-link(rel="stylesheet" href="index.css")
-link(rel="shortcut icon" href="images/favicon.png")
-meta(name="google-site-verification" content="XH-V9lvvJB_yd13v8bX2Mz1NVZbTWZ72jA9_w02jbzc")
-link(rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj")
+<!doctype html>
+html
+head
+  title Pause Indefinitely for Netflix - Never see Netflix timeout errors again
+  meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui")
+  meta(charset="utf-8")
+  link(rel="stylesheet" href="index.css")
+  link(rel="shortcut icon" href="images/favicon.png")
+  meta(name="google-site-verification" content="XH-V9lvvJB_yd13v8bX2Mz1NVZbTWZ72jA9_w02jbzc")
+  link(rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ledldpagpihpfbohbdmdlkdkfnjojipj")
 
-#fb-root
-script.
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+body
+  #fb-root
+  script.
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-.logo
-  h1 Pause Indefinitely for Netflix
+  .logo
+    h1 Pause Indefinitely for Netflix
 
-.hero
-  h1 Pause Netflix for as long as you want.
-  p
-    button#install-button(onclick="chrome.webstore.install()") Install Chrome Extension
-    script.
-      if (chrome.app.isInstalled) {
-        document.getElementById('install-button').style.display = 'none';
-      }
+  .hero
+    h1 Pause Netflix for as long as you want.
+    p
+      button#install-button(onclick="chrome.webstore.install()") Install Chrome Extension
+      script.
+        if (chrome.app.isInstalled) {
+          document.getElementById('install-button').style.display = 'none';
+        }
 
-  p.social
-    span.twitter
-      a(href="http://twitter.com/share" class="twitter-share-button" data-url="http://pauseindefinitely.com" data-text="Pause Netflix indefinitely without getting Playback Timeout errors." data-count="horizontal" data-via="adamfschwartz")
-      script(type="text/javascript" src="http://platform.twitter.com/widgets.js")
-    span.facebook
-      span(class="fb-share-button" data-href="http://pauseindefinitely.com" data-layout="button_count")
+    p.social
+      span.twitter
+        a(href="http://twitter.com/share" class="twitter-share-button" data-url="http://pauseindefinitely.com" data-text="Pause Netflix indefinitely without getting Playback Timeout errors." data-count="horizontal" data-via="adamfschwartz")
+        script(type="text/javascript" src="http://platform.twitter.com/widgets.js")
+      span.facebook
+        span(class="fb-share-button" data-href="http://pauseindefinitely.com" data-layout="button_count")
 
-    script.
-      (function(){
-        var interval = setInterval(function(){
-          if (document.querySelector('.social').getElementsByTagName('iframe').length === 2) {
-            document.querySelector('.social').className += ' loaded';
-            clearInterval(interval);
-          }
-        }, 250);
-      })();
+      script.
+        (function(){
+          var interval = setInterval(function(){
+            if (document.querySelector('.social').getElementsByTagName('iframe').length === 2) {
+              document.querySelector('.social').className += ' loaded';
+              clearInterval(interval);
+            }
+          }, 250);
+        })();
 
-.graphic
-  .chrome
-    .chrome-top
-    .chrome-top-left
-    .chrome-top-right
-    .chrome-body
-      .whoops
+  .graphic
+    .chrome
+      .chrome-top
+      .chrome-top-left
+      .chrome-top-right
+      .chrome-body
+        .whoops
 
-.footer
-  a(href="http://twitter.com/adamfschwartz") Follow&nbsp;@adamfschwartz
-  span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") ★&nbsp;on&nbsp;GitHub
-  span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store
+  .footer
+    a(href="http://twitter.com/adamfschwartz") Follow&nbsp;@adamfschwartz
+    span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") ★&nbsp;on&nbsp;GitHub
+    span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    a(href="https://github.com/adamschwartz/netflix-pause-indefinitely") View&nbsp;on&nbsp;the&nbsp;Chrome&nbsp;Web&nbsp;Store
